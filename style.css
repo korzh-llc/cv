@@ -1,0 +1,331 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+section{
+    margin-top: 2em;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+  font-family: "Zalando Sans Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weigh;
+  font-style: normal;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.7s ease, box-shadow 0.7s ease;
+    background-color: #fff;
+    height: 4em;
+}
+header.scrolled {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.header__inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+.logo{
+    width: 3em;
+    height: 1em;
+    justify-content: left;
+    margin-left: 0.9em;
+}
+.navigation{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    text-decoration: none;
+    color: black;
+    margin-right: 0.9em;
+    font-size: 0.9em;
+    align-items: center;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    scroll-behavior: smooth;
+}
+.myself{
+    margin-top: 5em;
+}
+.myself__inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.myself__img{
+    margin-top: 1em;
+    width: 13em;
+}
+.myself__text{
+    text-align: center;
+    width: 45em;
+    margin-top: .6em;
+}
+.carousel{
+    margin: 100px auto;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    margin-top: 9em;
+}
+.skills{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1em;
+    gap: 1em;
+    animation: spin 9s infinite linear;
+    margin-bottom: 2em;
+}
+.skills ::-webkit-scrollbar{
+    display: none;
+}
+.skill{
+    flex: 0 0 6em;
+    height: 2em;
+    padding: 1em;
+    background: rgb(44, 71, 119);;
+    font-size: 3rem;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+    color: white;
+    padding: 1.5em;
+}
+@keyframes spin{
+    from{translate: 0;}
+    to{translate: -100%;}
+}
+.projects__text{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+.orange {
+  background: rgb(44, 71, 119);
+  position: relative;
+  height: 4em;
+  padding-top: 3em;
+  padding-bottom: 10em; 
+} 
+.cards{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: .7em;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: .1em white solid;
+  border-radius: 1em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: .7em;
+  background-color: #fff0f0;
+  transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+.card__img{
+  width: 20.5em;
+  height: 20em;
+}
+.card:hover {
+  transform: translateY(-5px) scale(1.03); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); 
+  cursor: pointer;
+}
+.title{
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1em;
+}
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    width: 85%;
+    height: 85%;
+    margin: auto;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+footer{
+    margin-top: 20em;
+    height: 2em;
+    display: flex;
+    flex-direction: column;
+}
+footer p {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 10px;
+    color: black;
+}
+
+footer a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+
+@media (max-width: 768px) {
+
+  /* ===== GLOBAL ===== */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    margin-top: 2em;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    height: auto;
+    padding: 0.8em 0;
+  }
+
+  .header__inner {
+    flex-direction: column;
+    gap: 0.6em;
+  }
+
+  nav {
+    gap: 1em;
+  }
+
+  .navigation {
+    font-size: 0.7em;
+    margin: 0;
+  }
+
+  /* ===== MYSELF ===== */
+  .myself {
+    margin-top: 3em;
+  }
+
+  .myself__inner {
+    padding: 0 1em;
+  }
+
+  .name {
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .myself__text {
+    width: 100%;
+    font-size: 0.7em;
+  }
+
+  .myself__img {
+    width: 10em;
+  }
+
+  /* ===== SKILLS ===== */
+  .carousel {
+    margin: 40px auto;
+    overflow-x: auto;
+  }
+
+  .skills {
+    animation: none;
+  }
+
+  .skill {
+    font-size: 1.2rem;
+    padding: 1em;
+    flex: 0 0 auto;
+  }
+
+  /* ===== PROJECTS ===== */
+  .purple {
+    background: rgb(220, 136, 94);
+    padding: 2em 1em;
+    height: auto;
+  }
+
+  .cards {
+    position: static;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    margin-top: 2em;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 22em;
+    height: auto;
+  }
+
+  .card__img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* ===== MODAL ===== */
+  .modal-content {
+    width: 95%;
+    height: 90%;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    margin-top: 4em;
+  }
+
+  footer p {
+    font-size: 8px;
+  }
+}
